@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style type="text/css">
+<style>
+{
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 62.5%;
+	font-family: Helvetica, sans-serif;
+	background: url(images/stripe.png) repeat;
+}
+
+p {
+	font-size: 1.3em;
+	margin-bottom: 15px;
+}
+
+#page-wrap {
+	width: 660px;
+	background: white;
+	padding: 20px 50px 20px 50px;
+	margin: 20px auto;
+	min-height: 500px;
+	height: auto !important;
+	height: 500px;
+}
+
+#contact-area {
+	width: 600px;
+	margin-top: 25px;
+}
+
+#contact-area input, #contact-area textarea {
+	padding: 5px;
+	width: 471px;
+	font-family: Helvetica, sans-serif;
+	font-size: 1.4em;
+	margin: 0px 0px 10px 0px;
+	border: 2px solid #ccc;
+}
+
+#contact-area textarea {
+	height: 90px;
+}
+
+#contact-area textarea:focus, #contact-area input:focus {
+	border: 2px solid #900;
+}
+
+#contact-area input.submit-button {
+	width: 100px;
+	float: right;
+}
+
+label {
+	float: left;
+	text-align: right;
+	margin-right: 15px;
+	width: 100px;
+	padding-top: 5px;
+	font-size: 1.4em;
+}
+</style>
+
+
+</style>
+</head>
+
+<script type="text/javascript">
+
+function validateRegisterForm() {
+    var name = document.forms["myForm"]["fname"].value;
+    if (name == null || name == "") {
+        alert("Name must be filled out");
+        return false;
+    }
+    var password = document.forms["myForm"]["pwd"].value;
+    if (password == null || password == "") {
+        alert("Password must be filled out");
+        return false;
+    }
+    var rpassword = document.forms["myForm"]["rpwd"].value;
+    if (rpassword == null || rpassword == "") {
+        alert("Re enter Password must be filled out");
+        return false;
+    }
+    var mail = document.forms["myForm"]["email"].value;
+    if (mail == null || mail == "") {
+        alert("Email must be filled out");
+        return false;
+    }
+}
+</script>
+<body>
+
+<h1>Register Here</h1>
+	<div id="page-wrap">
+		<div id="contact-area">
+
+<form name="myForm"
+onsubmit="return validateRegisterForm()" method="post">
+ User Name: <input type="text" name="fname"><br>
+password: <input type="text" name="pwd"><br>
+password: <input type="text" name="rpwd"><br>
+Email: <input type="text" name="email">
+
+
+&nbsp;&nbsp;<input type="submit" value="Submit">
+
+</form>
+</div>
+</div>
+
+</body>
+</html>
